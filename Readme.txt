@@ -1,0 +1,1 @@
+Solutions of HW5 of Maktab25 Java
