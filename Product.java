@@ -1,6 +1,6 @@
 public class Product {
     private int type;
-    private int id;
+    private String id;
     private String name;
     private int unitPrice;
     private int numbersAvailable;

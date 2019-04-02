@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class User {
@@ -11,8 +12,9 @@ public class User {
     private String city;
     private String postalCode;
     private String address;
+    ArrayList<Order> orders = new ArrayList<Order>();
     //--------------------------------------------------------------------
-    HashMap<Product, Integer> basket = new HashMap<Product, Integer>();
+    HashMap<Product, Integer> basket = new HashMap<>();
     //--------------------------------------------------------------------
     public void addToBasket(Product prod, Integer number)
     {
@@ -40,4 +42,10 @@ public class User {
         System.out.println("Total Charge of basket: "  + totalCharge);
     }
     //--------------------------------------------------------------------
+    public void registerOrder()
+    {
+        Order registeredOrder = new Order();
+        registeredOrder.fillBasket(basket);
+        orders.add(registeredOrder);
+    }
 }
