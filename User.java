@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class User {
+    ArrayList<Order> orders = new ArrayList<Order>();
+    //--------------------------------------------------------------------
+    HashMap<Product, Integer> basket = new HashMap<>();
     private String userName;
     private String password;
     private String firstName;
@@ -12,9 +15,51 @@ public class User {
     private String city;
     private String postalCode;
     private String address;
-    ArrayList<Order> orders = new ArrayList<Order>();
     //--------------------------------------------------------------------
-    HashMap<Product, Integer> basket = new HashMap<>();
+    public String getUserName() {
+        return userName;
+    }
+    //--------------------------------------------------------------------
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    //--------------------------------------------------------------------
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    //--------------------------------------------------------------------
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    //--------------------------------------------------------------------
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    //--------------------------------------------------------------------
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    //--------------------------------------------------------------------
+    public void setEmsil(String emsil) {
+        this.emsil = emsil;
+    }
+    //--------------------------------------------------------------------
+    public void setState(String state) {
+        this.state = state;
+    }
+    //--------------------------------------------------------------------
+    public void setCity(String city) {
+        this.city = city;
+    }
+    //--------------------------------------------------------------------
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+    //--------------------------------------------------------------------
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     //--------------------------------------------------------------------
     public void addToBasket(Product prod, Integer number)
     {
