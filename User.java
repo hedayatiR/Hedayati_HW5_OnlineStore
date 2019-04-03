@@ -105,6 +105,7 @@ public class User {
         else {
             basketProducts.add(prod);
             basketProductsNumbers.add(number);
+            System.out.println("Product successfully added to basket.");
         }
     }
 

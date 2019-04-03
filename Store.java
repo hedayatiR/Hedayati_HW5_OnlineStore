@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Store {
 
-    ArrayList<Product> products = new ArrayList<>();
-    ArrayList<User> users = new ArrayList<>();
+    private ArrayList<Product> products = new ArrayList<>();
+    private ArrayList<User> users = new ArrayList<>();
 
     private User loggedInUser; //current User logged in
 
@@ -204,7 +204,6 @@ public class Store {
         }
         if (!existInList) {
             loggedInUser.addToBasket(products.get(index - 1), number);
-            System.out.println("Product successfully added to basket.");
         }
     }
 
