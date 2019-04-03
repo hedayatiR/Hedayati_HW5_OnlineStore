@@ -7,15 +7,17 @@ public class Product {
     private int unitPrice;
     private int numbersAvailable;
     private String descriptions;
+
     //--------------------------------------------------------------------
-    public Product()
-    {
+    public Product() {
         this.id = UUID.randomUUID().toString();
     }
+
     //--------------------------------------------------------------------
     public int getNumbersAvailable() {
         return numbersAvailable;
     }
+
     //--------------------------------------------------------------------
     public void setNumbersAvailable(int numbersAvailable) {
         this.numbersAvailable = numbersAvailable;
@@ -35,14 +37,17 @@ public class Product {
     public String getName() {
         return name;
     }
+
     //--------------------------------------------------------------------
     public void setName(String name) {
         this.name = name;
     }
+
     //--------------------------------------------------------------------
     public int getUnitPrice() {
         return unitPrice;
     }
+
     //--------------------------------------------------------------------
     public void setUnitPrice(int unitPrice) {
         this.unitPrice = unitPrice;

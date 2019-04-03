@@ -1,21 +1,26 @@
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Order {
-    HashMap<Product, Integer> basketPurchased = new HashMap<>();
+    private ArrayList<Product> orderProducts;
+    private ArrayList<Integer> orderProductsNumbers;
     private String id;
     private int totalCharge;
+
     //--------------------------------------------------------------------
-    public Order()
-    {
-         this.id = UUID.randomUUID().toString();
+    public Order() {
+        this.id = UUID.randomUUID().toString();
     }
+
     //--------------------------------------------------------------------
-    public void fillBasket(HashMap<Product, Integer> basket)
-    {
-        basketPurchased = basket;
-        for (Product prod : basketPurchased.keySet()) {
-            totalCharge += prod.getUnitPrice() *  basketPurchased.get(prod);
+    // copy current basket to arraylists in order
+    // calcualte total money to be paid
+    public void fillBasket(ArrayList<Product> basketProducts, ArrayList<Integer> basketProductsNumbers) {
+        orderProducts = new ArrayList<>(basketProducts);
+        orderProductsNumbers = new ArrayList<>(basketProductsNumbers);
+
+        for (int i = 0; i < orderProducts.size(); i++) {
+            totalCharge += orderProducts.get(i).getUnitPrice() * orderProductsNumbers.get(i);
         }
     }
     //--------------------------------------------------------------------
